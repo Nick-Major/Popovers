@@ -1,3 +1,5 @@
+import Popover from "./popover";
+
 document.addEventListener('DOMContentLoaded', ()=> {
     const body = document.querySelector('body');
 
@@ -7,7 +9,15 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     body.append(btn);
 
+    const popover = new Popover();
+
     btn.addEventListener('click', ()=> {
+        const popoverEl = document.querySelector('.popover');
+        if(!popoverEl) {
+            popover.showPopover();
+        } else {
+            popover.removePopover();
+        }
         
     })
 })

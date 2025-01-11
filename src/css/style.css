@@ -8,3 +8,26 @@
     color: #fff;
     padding: .5rem 1rem;
 }
+
+.popover {
+    min-width: 276px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.popover-title {
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    background-color: #f7f7f7;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+}
+
+.popover-body {
+    padding: .5rem .75rem;
+    color: #212529;
+}
+
+.hide {
+    display: none;
+}
+
