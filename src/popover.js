@@ -21,6 +21,14 @@ export default class Popover {
         document.body.appendChild(popoverElement);
     }
 
+    applyStyle(left, top) {
+        const popoverEl = document.querySelector('.popover');
+        const btn = document.querySelector('.btn');
+
+        popoverEl.style.top = top - popoverEl.offsetHeight + "px";
+        popoverEl.style.left = left + btn.offsetWidth / 2 - popoverEl.offsetWidth / 2 + "px";;
+    }
+
     removePopover() {
         const popover = document.querySelector('.popover');
 

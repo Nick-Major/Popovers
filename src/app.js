@@ -13,8 +13,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     btn.addEventListener('click', ()=> {
         const popoverEl = document.querySelector('.popover');
+
+        console.log(btn.getBoundingClientRect());
+        
+        const { left, top } = btn.getBoundingClientRect();
+        
         if(!popoverEl) {
             popover.showPopover();
+            popover.applyStyle(left, top);
         } else {
             popover.removePopover();
         }
