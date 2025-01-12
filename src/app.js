@@ -1,7 +1,6 @@
 import Popover from "./popover";
 
 document.addEventListener('DOMContentLoaded', ()=> {
-    const body = document.querySelector('body');
     const form = document.querySelector('.form');
 
     const btn = document.createElement('button');
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     btn.classList.add('btn');
 
     form.append(btn);
-    body.append(form);
 
     const popover = new Popover();
 

@@ -21,19 +21,12 @@ describe("popover form", () => {
   });
 
   test("clicking on the button should show a popover", async () => {
-    await page.goto(url);
+    await page.goto(url, { waitUntil: "domcontentloaded" });
 
-    await page.waitForSelector(".form"); // ожидаем появление формы
+    await page.waitForSelector(".form");
+    await page.click(".form button");
 
-    // находим элементы и кликаем по кнопке
-    const form = await page.$(".form");
-    const button = await form.$(".btn");
-    await button.click();
-
-    // ожидаем появление элемента
-    await page.waitForSelector(".popover");
     const popover = await page.$(".popover");
-
     expect(popover).toBeTruthy();
 
   });
