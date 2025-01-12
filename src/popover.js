@@ -5,13 +5,16 @@ export default class Popover {
 
     showPopover() {
         const popoverElement = document.createElement('div');
+        const popoverArrow = document.createElement('div');
         const popoverTitle = document.createElement('h3');
         const popoverBody = document.createElement('div');
 
+        popoverElement.appendChild(popoverArrow);
         popoverElement.appendChild(popoverTitle);
         popoverElement.appendChild(popoverBody);
 
         popoverElement.classList.add('popover');
+        popoverArrow.classList.add('arrow');
         popoverTitle.classList.add('popover-title');
         popoverBody.classList.add('popover-body');
 
@@ -25,7 +28,7 @@ export default class Popover {
         const popoverEl = document.querySelector('.popover');
         const btn = document.querySelector('.btn');
 
-        popoverEl.style.top = top - popoverEl.offsetHeight + "px";
+        popoverEl.style.top = top - popoverEl.offsetHeight - 10 + "px";
         popoverEl.style.left = left + btn.offsetWidth / 2 - popoverEl.offsetWidth / 2 + "px";;
     }
 

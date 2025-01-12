@@ -1,11 +1,9 @@
 .btn {
     position: relative;
+    box-sizing: border-box;
     width: 241px;
-    height: 48px;
-    margin-top: 100px;
-    margin-left: 8px;
-    margin-bottom: 8px;
     background-color: #dc3545;
+    margin: 150px 50px;
     font-size: 1.25rem;
     line-height: 1.5;
     border-radius: .3rem;
@@ -13,26 +11,38 @@
     padding: .5rem 1rem;
 }
 
+.btn:hover {
+    background-color: #d33030;
+}
+
 .popover {
+    font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     width: 276px;
     border: 1px solid rgba(0, 0, 0, .2);
+    display: table;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+}
+
+.arrow {
+    position: absolute;
+    left: calc(50% - 10px);
+    bottom: -9px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #cccccc;
+    background-color: #fff;
 }
 
 .popover-title {
     padding: .5rem .75rem;
+    margin: 0;
     font-size: 1rem;
-    background-color: #f7f7f7;
-    border-top-left-radius: calc(.3rem - 1px);
-    border-top-right-radius: calc(.3rem - 1px);
+    background-color: #DCDCDC;
 }
 
 .popover-body {
     padding: .5rem .75rem;
     color: #212529;
 }
-
-.hide {
-    display: none;
-}
-
