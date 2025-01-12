@@ -2,16 +2,20 @@ import Popover from "./popover";
 
 document.addEventListener('DOMContentLoaded', ()=> {
     const body = document.querySelector('body');
+    const form = document.querySelector('.form');
 
     const btn = document.createElement('button');
     btn.textContent = 'Click to toggle popover'
     btn.classList.add('btn');
 
-    body.append(btn);
+    form.append(btn);
+    body.append(form);
 
     const popover = new Popover();
 
-    btn.addEventListener('click', ()=> {
+    form.addEventListener('click', (event)=> {
+        event.preventDefault();
+
         const popoverEl = document.querySelector('.popover');
 
         console.log(btn.getBoundingClientRect());
